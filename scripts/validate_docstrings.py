@@ -431,7 +431,7 @@ def validate_one(func_name):
             if not doc.parameter_desc(param)[0].isupper() and doc.parameter_desc(param)[0] != '-':
                 param_errs.append('Parameter "{}" description '
                                   'should start with '
-                                  'capital letter'.format(param))
+                                  'capital letter or - for enums'.format(param))
             if doc.parameter_desc(param)[-1] != '.':
                 param_errs.append('Parameter "{}" description '
                                   'should finish with "."'.format(param))
